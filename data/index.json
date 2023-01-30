@@ -1,0 +1,920 @@
+[
+{
+    "id": 1,
+    "name": "الفاتحة",
+    "nameFr": "Al-Faatiha",
+    "ayat": 7,
+    "type": "مكية",
+    "page": 1
+},
+{
+    "id": 2,
+    "name": "البقرة",
+    "nameFr": "Al-Baqara",
+    "ayat": 285,
+    "type": "مدنية",
+    "page": 2
+},
+{
+    "id": 3,
+    "name": "آل عمران",
+    "nameFr": "Aal-i-Imraan",
+    "ayat": 200,
+    "type": "مدنية",
+    "page": 37
+},
+{
+    "id": 4,
+    "name": "النساء",
+    "nameFr": "An-Nisaa",
+    "ayat": 175,
+    "type": "مدنية",
+    "page": 56
+},
+{
+    "id": 5,
+    "name": "المائدة",
+    "nameFr": "Al-Maaida",
+    "ayat": 123,
+    "type": "مدنية",
+    "page": 77
+},
+{
+    "id": 6,
+    "name": "الأنعام",
+    "nameFr": "Al-An'aam",
+    "ayat": 166,
+    "type": "مكية",
+    "page": 93
+},
+{
+    "id": 7,
+    "name": "الأعراف",
+    "nameFr": "Al-A'raaf",
+    "ayat": 206,
+    "type": "مكية",
+    "page": 113
+},
+{
+    "id": 8,
+    "name": "الأنفال",
+    "nameFr": "Al-Anfaal",
+    "ayat": 76,
+    "type": "مدنية",
+    "page": 135
+},
+{
+    "id": 9,
+    "name": "التوبة",
+    "nameFr": "At-Tawba",
+    "ayat": 130,
+    "type": "مدنية",
+    "page": 143
+},
+{
+    "id": 10,
+    "name": "يونس",
+    "nameFr": "Yunus",
+    "ayat": 109,
+    "type": "مكية",
+    "page": 160
+},
+{
+    "id": 11,
+    "name": "هود",
+    "nameFr": "Hud",
+    "ayat": 121,
+    "type": "مكية",
+    "page": 171
+},
+{
+    "id": 12,
+    "name": "يوسف",
+    "nameFr": "Yusuf",
+    "ayat": 111,
+    "type": "مكية",
+    "page": 183
+},
+{
+    "id": 13,
+    "name": "الرعد",
+    "nameFr": "Ar-Ra'd",
+    "ayat": 44,
+    "type": "مدنية",
+    "page": 194
+},
+{
+    "id": 14,
+    "name": "إبراهيم",
+    "nameFr": "Ibrahim",
+    "ayat": 54,
+    "type": "مكية",
+    "page": 199
+},
+{
+    "id": 15,
+    "name": "الحجر",
+    "nameFr": "Al-Hijr",
+    "ayat": 99,
+    "type": "مكية",
+    "page": 205
+},
+{
+    "id": 16,
+    "name": "النحل",
+    "nameFr": "An-Nahl",
+    "ayat": 128,
+    "type": "مكية",
+    "page": 209
+},
+{
+    "id": 17,
+    "name": "الإسراء",
+    "nameFr": "Al-Israa",
+    "ayat": 110,
+    "type": "مكية",
+    "page": 221
+},
+{
+    "id": 18,
+    "name": "الكهف",
+    "nameFr": "Al-Kahf",
+    "ayat": 105,
+    "type": "مكية",
+    "page": 230
+},
+{
+    "id": 19,
+    "name": "مريم",
+    "nameFr": "Maryam",
+    "ayat": 99,
+    "type": "مكية",
+    "page": 241
+},
+{
+    "id": 20,
+    "name": "طه",
+    "nameFr": "Taa-Haa",
+    "ayat": 134,
+    "type": "مكية",
+    "page": 249
+},
+{
+    "id": 21,
+    "name": "الأنبياء",
+    "nameFr": "Al-Anbiyaa",
+    "ayat": 111,
+    "type": "مكية",
+    "page": 258
+},
+{
+    "id": 22,
+    "name": "الحج",
+    "nameFr": "Al-Hajj",
+    "ayat": 76,
+    "type": "مدنية",
+    "page": 266
+},
+{
+    "id": 23,
+    "name": "المؤمنون",
+    "nameFr": "Al-Muminoon",
+    "ayat": 119,
+    "type": "مكية",
+    "page": 274
+},
+{
+    "id": 24,
+    "name": "النور",
+    "nameFr": "An-Noor",
+    "ayat": 62,
+    "type": "مدنية",
+    "page": 282
+},
+{
+    "id": 25,
+    "name": "الفرقان",
+    "nameFr": "Al-Furqaan",
+    "ayat": 77,
+    "type": "مكية",
+    "page": 290
+},
+{
+    "id": 26,
+    "name": "الشعراء",
+    "nameFr": "Ash-Shu'araa",
+    "ayat": 226,
+    "type": "مكية",
+    "page": 297
+},
+{
+    "id": 27,
+    "name": "النمل",
+    "nameFr": "An-Naml",
+    "ayat": 95,
+    "type": "مكية",
+    "page": 306
+},
+{
+    "id": 28,
+    "name": "القصص",
+    "nameFr": "Al-Qasas",
+    "ayat": 88,
+    "type": "مكية",
+    "page": 313
+},
+{
+    "id": 29,
+    "name": "العنكبوت",
+    "nameFr": "Al-Ankaboot",
+    "ayat": 69,
+    "type": "مكية",
+    "page": 322
+},
+{
+    "id": 30,
+    "name": "الروم",
+    "nameFr": "Ar-Room",
+    "ayat": 59,
+    "type": "مكية",
+    "page": 329
+},
+{
+    "id": 31,
+    "name": "لقمان",
+    "nameFr": "Luqman",
+    "ayat": 33,
+    "type": "مكية",
+    "page": 334
+},
+{
+    "id": 32,
+    "name": "السجدة",
+    "nameFr": "As-Sajda",
+    "ayat": 30,
+    "type": "مكية",
+    "page": 338
+},
+{
+    "id": 33,
+    "name": "الأحزاب",
+    "nameFr": "Al-Ahzaab",
+    "ayat": 73,
+    "type": "مدنية",
+    "page": 340
+},
+{
+    "id": 34,
+    "name": "سبأ",
+    "nameFr": "Saba",
+    "ayat": 54,
+    "type": "مكية",
+    "page": 348
+},
+{
+    "id": 35,
+    "name": "فاطر",
+    "nameFr": "Faatir",
+    "ayat": 46,
+    "type": "مكية",
+    "page": 354
+},
+{
+    "id": 36,
+    "name": "يس",
+    "nameFr": "Yaseen",
+    "ayat": 82,
+    "type": "مكية",
+    "page": 361
+},
+{
+    "id": 37,
+    "name": "الصافات",
+    "nameFr": "As-Saaffaat",
+    "ayat": 182,
+    "type": "مكية",
+    "page": 368
+},
+{
+    "id": 38,
+    "name": "ص",
+    "nameFr": "Saad",
+    "ayat": 86,
+    "type": "مكية",
+    "page": 374
+},
+{
+    "id": 39,
+    "name": "الزمر",
+    "nameFr": "Az-Zumar",
+    "ayat": 72,
+    "type": "مكية",
+    "page": 380
+},
+{
+    "id": 40,
+    "name": "غافر",
+    "nameFr": "Al-Ghaafir",
+    "ayat": 84,
+    "type": "مكية",
+    "page": 387
+},
+{
+    "id": 41,
+    "name": "فصلت",
+    "nameFr": "Fussilat",
+    "ayat": 53,
+    "type": "مكية",
+    "page": 396
+},
+{
+    "id": 42,
+    "name": "الشورى",
+    "nameFr": "Ash-Shura",
+    "ayat": 50,
+    "type": "مكية",
+    "page": 401
+},
+{
+    "id": 43,
+    "name": "الزخرف",
+    "nameFr": "Az-Zukhruf",
+    "ayat": 89,
+    "type": "مكية",
+    "page": 406
+},
+{
+    "id": 44,
+    "name": "الدّخان",
+    "nameFr": "Ad-Dukhaan",
+    "ayat": 56,
+    "type": "مكية",
+    "page": 412
+},
+{
+    "id": 45,
+    "name": "الجاثية",
+    "nameFr": "Al-Jaathiya",
+    "ayat": 36,
+    "type": "مكية",
+    "page": 415
+},
+{
+    "id": 46,
+    "name": "الأحقاف",
+    "nameFr": "Al-Ahqaf",
+    "ayat": 34,
+    "type": "مكية",
+    "page": 418
+},
+{
+    "id": 47,
+    "name": "محمد",
+    "nameFr": "Muhamad",
+    "ayat": 39,
+    "type": "مدنية",
+    "page": 423
+},
+{
+    "id": 48,
+    "name": "الفتح",
+    "nameFr": "Al-Fath",
+    "ayat": 29,
+    "type": "مدنية",
+    "page": 427
+},
+{
+    "id": 49,
+    "name": "الحجرات",
+    "nameFr": "Al-Hujuraat",
+    "ayat": 18,
+    "type": "مدنية",
+    "page": 430
+},
+{
+    "id": 50,
+    "name": "ق",
+    "nameFr": "Qaaf",
+    "ayat": 45,
+    "type": "مكية",
+    "page": 433
+},
+{
+    "id": 51,
+    "name": "الذاريات",
+    "nameFr": "Adh-Dhaariyat",
+    "ayat": 60,
+    "type": "مكية",
+    "page": 436
+},
+{
+    "id": 52,
+    "name": "الطور",
+    "nameFr": "At-Tur",
+    "ayat": 47,
+    "type": "مكية",
+    "page": 438
+},
+{
+    "id": 53,
+    "name": "النجم",
+    "nameFr": "An-Najm",
+    "ayat": 61,
+    "type": "مكية",
+    "page": 441
+},
+{
+    "id": 54,
+    "name": "القمر",
+    "nameFr": "Al-Qamar",
+    "ayat": 55,
+    "type": "مكية",
+    "page": 443
+},
+{
+    "id": 55,
+    "name": "الرحمن",
+    "nameFr": "Ar-Rahmaan",
+    "ayat": 77,
+    "type": "مدنية",
+    "page": 446
+},
+{
+    "id": 56,
+    "name": "الواقعة",
+    "nameFr": "Al-Waaqia",
+    "ayat": 99,
+    "type": "مكية",
+    "page": 449
+},
+{
+    "id": 57,
+    "name": "الحديد",
+    "nameFr": "Al-Hadid",
+    "ayat": 28,
+    "type": "مدنية",
+    "page": 452
+},
+{
+    "id": 58,
+    "name": "المجادلة",
+    "nameFr": "Al-Mujaadila",
+    "ayat": 21,
+    "type": "مدنية",
+    "page": 456
+},
+{
+    "id": 59,
+    "name": "الحشر",
+    "nameFr": "Al-Hashr",
+    "ayat": 24,
+    "type": "مدنية",
+    "page": 459
+},
+{
+    "id": 60,
+    "name": "الممتحنة",
+    "nameFr": "Al-Mumtahana",
+    "ayat": 13,
+    "type": "مدنية",
+    "page": 462
+},
+{
+    "id": 61,
+    "name": "الصف",
+    "nameFr": "As-Saff",
+    "ayat": 14,
+    "type": "مدنية",
+    "page": 465
+},
+{
+    "id": 62,
+    "name": "الجمعة",
+    "nameFr": "Al-Jumu'a",
+    "ayat": 11,
+    "type": "مدنية",
+    "page": 466
+},
+{
+    "id": 63,
+    "name": "المنافقون",
+    "nameFr": "Al-Munaafiqoon",
+    "ayat": 11,
+    "type": "مدنية",
+    "page": 467
+},
+{
+    "id": 64,
+    "name": "التغابن",
+    "nameFr": "At-Taghaabun",
+    "ayat": 18,
+    "type": "مدنية",
+    "page": 469
+},
+{
+    "id": 65,
+    "name": "الطلاق",
+    "nameFr": "At-Talaaq",
+    "ayat": 12,
+    "type": "مدنية",
+    "page": 471
+},
+{
+    "id": 66,
+    "name": "التحريم",
+    "nameFr": "At-Tahrim",
+    "ayat": 12,
+    "type": "مدنية",
+    "page": 473
+},
+{
+    "id": 67,
+    "name": "الملك",
+    "nameFr": "Al-Mulk",
+    "ayat": 30,
+    "type": "مكية",
+    "page": 475
+},
+{
+    "id": 68,
+    "name": "القلم",
+    "nameFr": "Al-Qalam",
+    "ayat": 52,
+    "type": "مكية",
+    "page": 477
+},
+{
+    "id": 69,
+    "name": "الحاقة",
+    "nameFr": "Al-Haaqqa",
+    "ayat": 52,
+    "type": "مكية",
+    "page": 479
+},
+{
+    "id": 70,
+    "name": "المعارج",
+    "nameFr": "Al-Ma'aarij",
+    "ayat": 44,
+    "type": "مكية",
+    "page": 481
+},
+{
+    "id": 71,
+    "name": "نوح",
+    "nameFr": "Nooh",
+    "ayat": 30,
+    "type": "مكية",
+    "page": 483
+},
+{
+    "id": 72,
+    "name": "الجن",
+    "nameFr": "Al-Jinn",
+    "ayat": 28,
+    "type": "مكية",
+    "page": 485
+},
+{
+    "id": 73,
+    "name": "المزمل",
+    "nameFr": "Al-Muzzammil",
+    "ayat": 18,
+    "type": "مكية",
+    "page": 487
+},
+{
+    "id": 74,
+    "name": "المدثر",
+    "nameFr": "Al-Muddaththir",
+    "ayat": 55,
+    "type": "مكية",
+    "page": 489
+},
+{
+    "id": 75,
+    "name": "القيامة",
+    "nameFr": "Al-Qiyaama",
+    "ayat": 39,
+    "type": "مكية",
+    "page": 491
+},
+{
+    "id": 76,
+    "name": "الإنسان",
+    "nameFr": "Al-Insaan",
+    "ayat": 31,
+    "type": "مدنية",
+    "page": 492
+},
+{
+    "id": 77,
+    "name": "المرسلات",
+    "nameFr": "Al-Mursalaat",
+    "ayat": 50,
+    "type": "مكية",
+    "page": 494
+},
+{
+    "id": 78,
+    "name": "النبأ",
+    "nameFr": "An-Naba",
+    "ayat": 40,
+    "type": "مكية",
+    "page": 495
+},
+{
+    "id": 79,
+    "name": "النازعات",
+    "nameFr": "An-Naazi'aat",
+    "ayat": 45,
+    "type": "مكية",
+    "page": 497
+},
+{
+    "id": 80,
+    "name": "عبس",
+    "nameFr": "Abasa",
+    "ayat": 42,
+    "type": "مكية",
+    "page": 498
+},
+{
+    "id": 81,
+    "name": "التكوير",
+    "nameFr": "At-Takwir",
+    "ayat": 29,
+    "type": "مكية",
+    "page": 500
+},
+{
+    "id": 82,
+    "name": "الإنفطار",
+    "nameFr": "Al-Infitaar",
+    "ayat": 19,
+    "type": "مكية",
+    "page": 501
+},
+{
+    "id": 83,
+    "name": "المطففين",
+    "nameFr": "Al-Mutaffifin",
+    "ayat": 36,
+    "type": "مكية",
+    "page": 501
+},
+{
+    "id": 84,
+    "name": "الإنشقاق",
+    "nameFr": "Al-Inshiqaaq",
+    "ayat": 25,
+    "type": "مكية",
+    "page": 503
+},
+{
+    "id": 85,
+    "name": "البروج",
+    "nameFr": "Al-Burooj",
+    "ayat": 22,
+    "type": "مكية",
+    "page": 504
+},
+{
+    "id": 86,
+    "name": "الطارق",
+    "nameFr": "At-Taariq",
+    "ayat": 17,
+    "type": "مكية",
+    "page": 505
+},
+{
+    "id": 87,
+    "name": "الأعلى",
+    "nameFr": "Al-A'laa",
+    "ayat": 19,
+    "type": "مكية",
+    "page": 506
+},
+{
+    "id": 88,
+    "name": "الغاشية",
+    "nameFr": "Al-Ghaashiya",
+    "ayat": 26,
+    "type": "مكية",
+    "page": 506
+},
+{
+    "id": 89,
+    "name": "الفجر",
+    "nameFr": "Al-Fajr",
+    "ayat": 32,
+    "type": "مكية",
+    "page": 507
+},
+{
+    "id": 90,
+    "name": "البلد",
+    "nameFr": "Al-Balad",
+    "ayat": 20,
+    "type": "مكية",
+    "page": 508
+},
+{
+    "id": 91,
+    "name": "الشمس",
+    "nameFr": "Ash-Shams",
+    "ayat": 15,
+    "type": "مكية",
+    "page": 509
+},
+{
+    "id": 92,
+    "name": "الليل",
+    "nameFr": "Al-Lail",
+    "ayat": 21,
+    "type": "مكية",
+    "page": 510
+},
+{
+    "id": 93,
+    "name": "الضحى",
+    "nameFr": "Ad-Dhuhaa",
+    "ayat": 11,
+    "type": "مكية",
+    "page": 511
+},
+{
+    "id": 94,
+    "name": "الشرح",
+    "nameFr": "Ash-Sharh",
+    "ayat": 8,
+    "type": "مكية",
+    "page": 511
+},
+{
+    "id": 95,
+    "name": "التين",
+    "nameFr": "At-Tin",
+    "ayat": 8,
+    "type": "مكية",
+    "page": 511
+},
+{
+    "id": 96,
+    "name": "العلق",
+    "nameFr": "Al-Alaq",
+    "ayat": 20,
+    "type": "مكية",
+    "page": 512
+},
+{
+    "id": 97,
+    "name": "القدر",
+    "nameFr": "Al-Qadr",
+    "ayat": 5,
+    "type": "مكية",
+    "page": 513
+},
+{
+    "id": 98,
+    "name": "البينة",
+    "nameFr": "Al-Bayyina",
+    "ayat": 8,
+    "type": "مدنية",
+    "page": 513
+},
+{
+    "id": 99,
+    "name": "الزلزلة",
+    "nameFr": "Az-Zalzala",
+    "ayat": 9,
+    "type": "مدنية",
+    "page": 514
+},
+{
+    "id": 100,
+    "name": "العاديات",
+    "nameFr": "Al-Aadiyaat",
+    "ayat": 11,
+    "type": "مكية",
+    "page": 514
+},
+{
+    "id": 101,
+    "name": "القارعة",
+    "nameFr": "Al-Qaari'a",
+    "ayat": 10,
+    "type": "مكية",
+    "page": 515
+},
+{
+    "id": 102,
+    "name": "التكاثر",
+    "nameFr": "At-Takaathur",
+    "ayat": 8,
+    "type": "مكية",
+    "page": 516
+},
+{
+    "id": 103,
+    "name": "العصر",
+    "nameFr": "Al-Asr",
+    "ayat": 3,
+    "type": "مكية",
+    "page": 516
+},
+{
+    "id": 104,
+    "name": "الهمزة",
+    "nameFr": "Al-Humaza",
+    "ayat": 9,
+    "type": "مكية",
+    "page": 516
+},
+{
+    "id": 105,
+    "name": "الفيل",
+    "nameFr": "Al-Fil",
+    "ayat": 5,
+    "type": "مكية",
+    "page": 517
+},
+{
+    "id": 106,
+    "name": "قريش",
+    "nameFr": "Quraish",
+    "ayat": 5,
+    "type": "مكية",
+    "page": 517
+},
+{
+    "id": 107,
+    "name": "الماعون",
+    "nameFr": "Al-Maa'un",
+    "ayat": 6,
+    "type": "مكية",
+    "page": 518
+},
+{
+    "id": 108,
+    "name": "الكوثر",
+    "nameFr": "Al-Kawthar",
+    "ayat": 3,
+    "type": "مكية",
+    "page": 518
+},
+{
+    "id": 109,
+    "name": "الكافرون",
+    "nameFr": "Al-Kaafiroon",
+    "ayat": 6,
+    "type": "مكية",
+    "page": 518
+},
+{
+    "id": 110,
+    "name": "النصر",
+    "nameFr": "An-Nasr",
+    "ayat": 3,
+    "type": "مدنية",
+    "page": 519
+},
+{
+    "id": 111,
+    "name": "المسد",
+    "nameFr": "Al-Masad",
+    "ayat": 5,
+    "type": "مكية",
+    "page": 519
+},
+{
+    "id": 112,
+    "name": "الإخلاص",
+    "nameFr": "Al-Ikhlaas",
+    "ayat": 4,
+    "type": "مكية",
+    "page": 519
+},
+{
+    "id": 113,
+    "name": "الفلق",
+    "nameFr": "Al-Falaq",
+    "ayat": 5,
+    "type": "مكية",
+    "page": 520
+},
+{
+    "id": 114,
+    "name": "الناس",
+    "nameFr": "An-Naas",
+    "ayat": 6,
+    "type": "مكية",
+    "page": 520
+},{
+    "id": 115,
+    "name": "دعاء ختم القرآن",
+    "nameFr": "",
+    "type": "مدنية",
+    "page": 521
+}
+]
