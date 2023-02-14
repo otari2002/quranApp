@@ -1,11 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TextInput, SafeAreaView, Text, View, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
-import { Feather } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import { useIsFocused } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const HEADER_HEIGHT = 55 + Constants.statusBarHeight;
 export default function Sourat({ navigation }) {
-  const sourat = require('../data/index.json');
+  const isFocused = useIsFocused();
+  const sourat = require('../data/sourat.json');
+  const [IsEng, setIsEng] = useState(0);
+
+  useEffect(() => {
+    if(isFocused){
+      const restoreValue = async () => {
+          await AsyncStorage.getItem("LangIsEng").then((value)=>{
+            if(value != null) setIsEng(parseInt(value))
+          });
+      };
+      restoreValue();
+    }
+  }, [isFocused,AsyncStorage, setIsEng]);
 
   const ItemSeparatorView = () => {
     return (
@@ -24,23 +40,22 @@ export default function Sourat({ navigation }) {
             });
         }}
       >
-      { item.nameFr != "" ? 
-        <SafeAreaView style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: "space-between", marginHorizontal:20, marginVertical: 8}}>
+      { item.type != "" ? 
+        <SafeAreaView style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: "space-between", marginHorizontal:5, marginVertical: 8}}>
           <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: "space-between"}}>
-            <Text style={styles.details}>{"عدد الآيات : "}{item.ayat}</Text>
-            <Text style={styles.details}>{"نوع السورة : "}{item.type}</Text>
+            <Text style={styles.details}>{languageJson[IsEng]["sourat"][0]}{item.ayat}</Text>
+            <Text style={styles.details}>{languageJson[IsEng]["sourat"][1]}{IsEng ? item.typeFr : item.type}</Text>
           </View>
-          <Text style={styles.title}>{item.name}</Text>
+          <Text style={styles.title}>{IsEng ? item.nameFr : item.name}</Text>
         </SafeAreaView>
       : <SafeAreaView style={{ flex: 1, margin:20, alignItems: 'center', justifyContent: "space-between", marginHorizontal:20, marginVertical: 8 }}>
-          <Text style={styles.title}>{item.name}</Text>
+          <Text adjustsFontSizeToFit={true} numberOfLines={1} style={styles.title}>{IsEng ? item.nameFr : item.name}</Text>
         </SafeAreaView>
       }
       </TouchableOpacity>
-      
     )
   }
-
+  const languageJson = require("../data/language.json");
   const [Soura, setSoura] = useState('');
   const [Sourat, setSourat] = useState(sourat);
 
@@ -54,8 +69,8 @@ export default function Sourat({ navigation }) {
         justifyContent: 'center',
         }}>
       <TouchableOpacity style={styles.header} onPress={() => navigation.toggleDrawer()}>
-        <Feather name="sidebar" size={30} color="black" />
-        <Text style={styles.headerText}>{"السور"}   </Text>
+        <Entypo name="list" size={30} color="black" />
+        <Text style={styles.headerText}>{languageJson[IsEng]["screens"][1]}   </Text>
       </TouchableOpacity>
       <TextInput
         value={Soura}
@@ -63,7 +78,7 @@ export default function Sourat({ navigation }) {
           setSoura(Soura);
           if(Soura != "") setSourat(sourat.filter(x=> x.name.includes(Soura)));
         }}
-        placeholder="اسم السورة : "
+        placeholder={languageJson[IsEng]["input"][0]}
         placeholderTextColor="black"
         style={styles.input}
       />
@@ -75,6 +90,7 @@ export default function Sourat({ navigation }) {
     <View style={styles.container}>
       <FlatList
         data={Sourat}
+        bounces={false}
         renderItem={ renderItem }
         ItemSeparatorComponent={ItemSeparatorView}
         ListHeaderComponent={ListHeader({navigation})}
@@ -93,10 +109,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ecf0f1'
   },
   title: {
-    fontSize: 25,
+    fontSize: 20,
     padding: 12,
     color: 'black',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   header:{
     flexDirection:'row'
@@ -111,7 +127,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 25,
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    paddingHorizontal: 15
   },
   input: {
     width: 300,

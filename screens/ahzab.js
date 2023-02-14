@@ -1,12 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TextInput, SafeAreaView, Text, View, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
-import { Feather } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { useIsFocused } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const HEADER_HEIGHT = 55 + Constants.statusBarHeight;
 
 export default function Ahzab({ navigation }) {
+  const isFocused = useIsFocused();
   const ahzab = require('../data/ahzab.json');
+  const [IsEng, setIsEng] = useState(0);
+
+  useEffect(() => {
+    if(isFocused){
+      const restoreValue = async () => {
+          await AsyncStorage.getItem("LangIsEng").then((value)=>{
+            if(value != null) setIsEng(parseInt(value))
+          });
+      };
+      restoreValue();
+    }
+  }, [isFocused,AsyncStorage, setIsEng]);
+
   const ItemSeparatorView = () => {
     return (
       <View style={{ height: 2, width: '100%', backgroundColor: 'black' }} />
@@ -32,7 +48,7 @@ export default function Ahzab({ navigation }) {
       
     )
   }
-
+  const languageJson = require("../data/language.json");
   const [Hizb, setHizb] = useState('');
   const [Ahzab, setAhzab] = useState(ahzab);
 
@@ -46,8 +62,8 @@ export default function Ahzab({ navigation }) {
         justifyContent: 'center',
         }}>
       <TouchableOpacity style={styles.header} onPress={() => navigation.toggleDrawer()}>
-        <Feather name="sidebar" size={30} color="black" />
-        <Text style={styles.headerText}>{"الأحزاب"}   </Text>
+        <MaterialIcons name="format-list-numbered" size={30} color="black" />
+        <Text style={styles.headerText}>{languageJson[IsEng]["screens"][2]}   </Text>
       </TouchableOpacity>
       <TextInput
         value={Hizb}
@@ -55,7 +71,7 @@ export default function Ahzab({ navigation }) {
           setHizb(Hizb);
           if(Hizb != "") setAhzab(ahzab.filter(x=> x.aya.includes(Hizb)));
         }}
-        placeholder="بداية الحزب : "
+        placeholder={languageJson[IsEng]["input"][1]}
         placeholderTextColor="black"
         style={styles.input}
       />
@@ -69,6 +85,7 @@ export default function Ahzab({ navigation }) {
     <View style={styles.container}>
       <FlatList
         data={Ahzab}
+        bounces={false}
         renderItem={ renderItem }
         ItemSeparatorComponent={ItemSeparatorView}
         ListHeaderComponent={ListHeader({navigation})}
@@ -96,7 +113,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 25,
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    paddingHorizontal: 15
   },
   header:{
     flexDirection:'row'

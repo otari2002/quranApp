@@ -1,40 +1,41 @@
 {
   "expo": {
-    "name": "quranapp",
-    "slug": "snack-2009a9c9-6cd2-445b-8171-c18f5116f7ea",
+    "name": "quranApp",
+    "slug": "quranApp",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "jsEngine": "hermes",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#efce8e"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/06c26f62-b27f-4fd4-9989-6e2e6a9fbed0"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.omartahri2002.snack-2009a9c9-6cd2-445b-8171-c18f5116f7ea"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#efce8e"
       },
-      "package": "com.omartahri2002.snack2009a9c96cd2445b8171c18f5116f7ea"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.omartahri2002.quranApp"
     },
     "extra": {
       "eas": {
-        "projectId": "a11cac4c-3311-4d2f-9782-73e269d68fa9"
+        "projectId": "06c26f62-b27f-4fd4-9989-6e2e6a9fbed0"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }

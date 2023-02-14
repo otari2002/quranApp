@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text, Image, Dimensions, Animated, TouchableOpacity } from 'react-native';
 import { useIsFocused } from '@react-navigation/native';
 import Constants from 'expo-constants';
-import { Feather } from '@expo/vector-icons';
+import { SimpleLineIcons } from '@expo/vector-icons';
 import { useOrientation } from '../data/orientation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const HEADER_HEIGHT = 75 + Constants.statusBarHeight;
 const scrollAnim = new Animated.Value(0);
@@ -21,20 +22,42 @@ const ratio = win.width/875;
 export default function FullQuran({ route, navigation }) {
   const orientation = useOrientation();
   const isFocused = useIsFocused();
+  const [listReady, setListReady] = useState(false);
   const [scrollIndex,setScrollIndex] = useState(0);
+  const [IsEng, setIsEng] = useState(0);
   const [ref,setRef] = useState(null);
   const handleScroll = (event) => {
     let yOffset = Math.floor(event.nativeEvent.contentOffset.y/picHeight);
     setScrollIndex(yOffset);
   };
+  const [imageWide, setImageWide] = useState(0);
+
   useEffect(() => {
-    const callback = (page) => ref.scrollToIndex({ animated: false, index: page });
-    if (isFocused) {
-      if(route.params) callback(route.params.page);
+    if (isFocused && listReady) {
+      if(route.params){
+        const callback = (page) => ref.scrollToIndex({ animated: false, index: page });
+        if(route.params.page > 0){
+          callback(route.params.page);
+          navigation.setParams({ page: 0 });
+        }
+      }
     }
-    //Dimensions.addEventListener('change', callback(scrollIndex));
-  },[isFocused,route,ref]);
+  },[isFocused,route,ref,navigation]);
   
+  useEffect(() => {
+    if(isFocused){
+      const restoreValue = async () => {
+          await AsyncStorage.getItem("imageWide").then((value)=>{
+            if(value != null) setImageWide(parseInt(value))
+          });
+          await AsyncStorage.getItem("LangIsEng").then((value)=>{
+            if(value != null) setIsEng(parseInt(value))
+          });
+      };
+      restoreValue();
+    }
+  }, [isFocused,AsyncStorage, setImageWide, setIsEng]);
+  const languageJson = require("../data/language.json");
   const [images, setImages] = useState([
     require("../data/pics/page1.jpg"),
     require("../data/pics/page2.jpg"),
@@ -565,9 +588,29 @@ export default function FullQuran({ route, navigation }) {
     require("../data/pics/page527.jpg")
   ]);
   
-  const picHeight = ( orientation === 'PORTRAIT' ? 1385 * ratio-25 : (1385 * ratio-25)*(win.height-100)/(win.width)-10 );
-  const picWidth = ( orientation === 'PORTRAIT' ? win.width : win.height-100 );
-
+  const imageHeights = {
+    "PORTRAIT":{
+      "normal" : 1385 * ratio-25,
+      "wide" : win.height-HEADER_HEIGHT
+    },
+    "LANDSCAPE":{
+      "normal" : (1385 * ratio-25)*(win.height-100)/(win.width)-10,
+      "wide" : (win.height-HEADER_HEIGHT)*(win.height-100)/(win.width*98/100)-10
+    }
+  };
+const imageWidths = {
+  "PORTRAIT":{
+    "normal" : win.width, 
+    "wide" : win.width*98/100
+  },
+  "LANDSCAPE":{
+    "normal" : win.height-100,
+    "wide" : win.height-Constants.statusBarHeight*3
+  }
+};
+  const type = (imageWide==1) ? "wide" : "normal";
+  const picHeight = imageHeights[orientation][type];
+  const picWidth = imageWidths[orientation][type];
   return (
     <SafeAreaView style={styles.container}>
       <Animated.FlatList
@@ -575,6 +618,7 @@ export default function FullQuran({ route, navigation }) {
         data={images}
         ref={(ref) => {
           setRef(ref);
+          setListReady(true);
         }}
         getItemLayout={(data, index) => ({
           length: picHeight +2,
@@ -597,12 +641,13 @@ export default function FullQuran({ route, navigation }) {
         contentOffset={{ y: -HEADER_HEIGHT }}
         renderItem={({ item, index }) => (
           <Image source={item} key={index} style={{
-            resizeMode: 'contain',
+            resizeMode: 'stretch',
             width: picWidth,
             height: picHeight,
             borderWidth: 1,
             borderColor: 'black',
             marginTop: index == 0 ? HEADER_HEIGHT : 0,
+            marginLeft: win.width/100,
           }} />
         )}
       />
@@ -610,8 +655,8 @@ export default function FullQuran({ route, navigation }) {
             backgroundColor: "#EFCE8E"
           }, { transform: [{ translateY }] }]}>
         <TouchableOpacity style={{ flexDirection:'row'}} onPress={() => navigation.toggleDrawer()}>
-          <Feather name="sidebar" size={30} color="black" />
-          <Text style={styles.headerText}>{"القرآن الكريم"}   </Text>
+          <SimpleLineIcons name="book-open" size={26} color="black" />
+          <Text style={styles.headerText}>{languageJson[IsEng]["screens"][0]}</Text>
         </TouchableOpacity>
       </Animated.View>
     </SafeAreaView>
@@ -638,6 +683,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 25,
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    paddingHorizontal: 15
   }
 });
