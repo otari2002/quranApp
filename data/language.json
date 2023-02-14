@@ -1,0 +1,15 @@
+[
+{
+    "screens" : ["القرآن الكريم", "السور", "الأحزاب", "الإعدادات"],
+    "settings" : ["صفحة مكبرة","صفحة عادية"],
+    "sourat": ["عدد الآيات : ", "نوع السورة : "],
+    "input" : ["اسم السورة : ", "بداية الحزب : "]
+},
+{
+    "screens" : ["Al-Quran", "Surat", "Ahzab", "Settings"],
+    "settings" : ["Stretched","Normal"],
+    "sourat" : ["N° of verses : ", "Type : "],
+    "input" : ["Name of Sura : ", "Start of Hizb : "]
+}
+
+]
