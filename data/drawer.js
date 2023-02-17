@@ -31,28 +31,28 @@ export function DrawerContent(props) {
 
           <Drawer.Section style={styles.drawerSection}>
             <TouchableOpacity style={{flex:1, flexDirection:'row', justifyContent:'space-between', marginVertical: 15, marginHorizontal:20}} onPress={() => {
-                props.navigation.navigate('القرآن الكريم');
+                props.navigation.navigate("quran");
               }}>
               <SimpleLineIcons name="book-open" size={26} color="black" />
               <Text style={styles.labelStyle} >{languageJson[IsEng]["screens"][0]}</Text>
             </TouchableOpacity>
             <View style={{ backgroundColor: "black", height: 1.5 }} />
             <TouchableOpacity style={{flex:1, flexDirection:'row', justifyContent:'space-between', marginVertical: 15, marginHorizontal:20}} onPress={() => {
-                props.navigation.navigate("السور");
+                props.navigation.navigate("sourat");
               }}>
               <Entypo name="list" size={30} color="black" />
               <Text style={styles.labelStyle} >{languageJson[IsEng]["screens"][1]}</Text>
             </TouchableOpacity>
             <View style={{ backgroundColor: "black", height: 1.5 }} />
             <TouchableOpacity style={{flex:1, flexDirection:'row', justifyContent:'space-between', marginVertical: 15, marginHorizontal:20}} onPress={() => {
-                props.navigation.navigate("الأحزاب");
+                props.navigation.navigate("ahzab");
               }}>
               <MaterialIcons name="format-list-numbered" size={30} color="black" />
               <Text style={styles.labelStyle} >{languageJson[IsEng]["screens"][2]}</Text>
             </TouchableOpacity>
             <View style={{ backgroundColor: "black", height: 1.5 }} />
             <TouchableOpacity style={{flex:1, flexDirection:'row', justifyContent:'space-between', marginVertical: 15, marginHorizontal:20}} onPress={() => {
-                props.navigation.navigate("الإعدادات");
+                props.navigation.navigate("settings");
               }}>
               <Ionicons name="settings-outline" size={26} color="black" />
               <Text style={styles.labelStyle} >{languageJson[IsEng]["screens"][3]}</Text>
