@@ -17,7 +17,7 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator 
         useLegacyImplementation 
-        initialRouteName="القرآن الكريم"
+        initialRouteName="quran"
         drawerContent={props => <DrawerContent {...props} /> }
         screenOptions={{
           drawerStyle: {
@@ -26,10 +26,10 @@ export default function App() {
           drawerPosition:'right'
         }}
       >
-        <Drawer.Screen name="القرآن الكريم" component={FullQuran} options={{headerShown: false}} initialParams={{ imageResize: "normal" }}/>
-        <Drawer.Screen name="السور" component={Sourat} options={{headerShown: false}}/>
-        <Drawer.Screen name="الأحزاب" component={Ahzab} options={{headerShown: false}}/>
-        <Drawer.Screen name="الإعدادات" component={Settings} options={{headerShown: false}}/>
+        <Drawer.Screen name="quran" component={FullQuran} options={{headerShown: false}} initialParams={{ imageResize: "normal" }}/>
+        <Drawer.Screen name="sourat" component={Sourat} options={{headerShown: false}}/>
+        <Drawer.Screen name="ahzab" component={Ahzab} options={{headerShown: false}}/>
+        <Drawer.Screen name="settings" component={Settings} options={{headerShown: false}}/>
       </Drawer.Navigator>
     </NavigationContainer>
   );
