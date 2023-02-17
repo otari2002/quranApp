@@ -34,7 +34,7 @@ export default function Ahzab({ navigation }) {
       <TouchableOpacity 
         onPress={()=>{
           navigation.navigate({
-              name: "القرآن الكريم",
+              name: "quran",
               params: { page: item.page },
               merge: true,
             });
